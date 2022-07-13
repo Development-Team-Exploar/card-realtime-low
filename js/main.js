@@ -184,7 +184,7 @@ const createScene = function () {
         let frontImg = new BABYLON.Texture("./assets/Front.jpg", scene);
         frontImg.invertY = true;
 
-        rightImg = new BABYLON.VideoTexture("video", "./assets/video-right-sm.mp4", scene, true);
+        rightImg = new BABYLON.VideoTexture("video", "./assets/video-right-sm-1.mp4", scene, true);
         rightImg.video.muted = true;
         //rightImg.invertY = true;
         let leftImg = new BABYLON.Texture("./assets/Left.jpg", scene);
@@ -447,13 +447,13 @@ scene.onPointerUp = function () {
                     angle = 0
                 }else if(clickedMeshName === "Plane.002"){
                     toAnimateCamera = true
-                    angle = 3*Math.PI/2
+                    angle = Math.PI/2
                 }else if(clickedMeshName === "Plane.003"){//back panel
                     toAnimateCamera = true
                     angle = Math.PI
                 }else if(clickedMeshName === "Plane.001"){
                     toAnimateCamera = true
-                    angle = Math.PI/2
+                    angle = 3*Math.PI/2
                     rightImg.video.currentTime = 0
                     rightImg.video.muted = false
                 }else {
