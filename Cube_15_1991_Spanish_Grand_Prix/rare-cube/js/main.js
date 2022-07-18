@@ -423,14 +423,14 @@ scene.onPointerUp = function () {
                 }else if(clickedMeshName === "Right"){
                     toAnimateCamera = true
                     angle = Math.PI/2
+                    rightImg.video.currentTime = 0
+                    rightImg.video.muted = false
                 }else if(clickedMeshName === "back"){//back panel
                     toAnimateCamera = true
                     angle = Math.PI
                 }else if(clickedMeshName === "left"){
                     toAnimateCamera = true
                     angle = 3*Math.PI/2
-                    rightImg.video.currentTime = 0
-                    rightImg.video.muted = false
                 }else {
                     toAnimateCamera = false
                 }
